@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# backup & screenshots (migration artifacts)
+_backup/
+_screenshots/
+public/_backup
+tablet-*.png
