@@ -499,8 +499,7 @@ section {
 
 /* Headshot Styling */
 .bio-photo {
-    position: sticky;
-    top: 120px;
+    position: static;
     min-width: 0; /* Prevent grid blowout */
 }
 
