@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
 
     const { data, error } = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: process.env.RECIPIENT_EMAIL || "christopherlee973@gmail.com",
+      to: [process.env.RECIPIENT_EMAIL || "christopherlee973@gmail.com", "tycnj316@gmail.com"],
       replyTo: `${name} <noreply@yuzana.ai>`,
       subject: `Engagement Request: ${name} from ${organization}`,
       html: `
