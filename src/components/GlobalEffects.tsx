@@ -33,7 +33,8 @@ export default function GlobalEffects() {
     ).matches;
 
     let observer: IntersectionObserver | null = null;
-    if (!prefersReducedMotion) {
+    const isFounderPage = pathname === "/founder";
+    if (!prefersReducedMotion && !isFounderPage) {
       observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
