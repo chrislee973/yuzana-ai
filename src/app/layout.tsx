@@ -25,10 +25,10 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "YUZANA.AI - Protection. Defined by Outcome, Not Activity.",
-  description: "Security advisory firm designed for leaders responsible for complex, high-stakes environments.",
+  description: "Security advisory firm designed for leaders responsible for complex, high-stakes environments. Strategic guidance from a former City of LA CISO.",
   openGraph: {
     title: "YUZANA.AI - Protection. Defined by Outcome, Not Activity.",
-    description: "Security advisory firm designed for leaders responsible for complex, high-stakes environments.",
+    description: "Security advisory firm designed for leaders responsible for complex, high-stakes environments. Strategic guidance from a former City of LA CISO.",
     url: "https://yuzana.ai",
     siteName: "YUZANA.AI",
     images: [
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "YUZANA.AI - Protection. Defined by Outcome, Not Activity.",
-    description: "Security advisory firm designed for leaders responsible for complex, high-stakes environments.",
+    description: "Security advisory firm designed for leaders responsible for complex, high-stakes environments. Strategic guidance from a former City of LA CISO.",
     images: ["https://yuzana.ai/og-image.png"],
   },
 };
