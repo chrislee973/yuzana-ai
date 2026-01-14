@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
 
     const { data, error } = await resend.emails.send({
       from: "Yuzana <noreply@yuzana.ai>",
-      to: ["Timothy.lee@yuzana.ai", "christopherlee973@gmail.com"],
+      to: ["Timothy.lee@yuzana.ai"],
       replyTo: `${name} <${email}>`,
       subject: `Engagement Request: ${name} from ${organization}`,
       html: `

@@ -24,8 +24,29 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "YUZANA.AI - The Quiet Architect",
-  description: "Protection. Defined by Outcome, Not Activity. Security advisory for leaders responsible for critical missions.",
+  title: "YUZANA.AI - Protection. Defined by Outcome, Not Activity.",
+  description: "Security advisory firm designed for leaders responsible for complex, high-stakes environments.",
+  openGraph: {
+    title: "YUZANA.AI - Protection. Defined by Outcome, Not Activity.",
+    description: "Security advisory firm designed for leaders responsible for complex, high-stakes environments.",
+    url: "https://yuzana.ai",
+    siteName: "YUZANA.AI",
+    images: [
+      {
+        url: "https://yuzana.ai/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Yuzana",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "YUZANA.AI - Protection. Defined by Outcome, Not Activity.",
+    description: "Security advisory firm designed for leaders responsible for complex, high-stakes environments.",
+    images: ["https://yuzana.ai/og-image.png"],
+  },
 };
 
 export default function RootLayout({
