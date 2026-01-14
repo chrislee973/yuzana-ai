@@ -16,9 +16,8 @@ export async function POST(request: NextRequest) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "onboarding@resend.dev",
-      // TODO: Add tycnj316@gmail.com back after verifying domain at resend.com/domains
-      to: [process.env.RECIPIENT_EMAIL || "christopherlee973@gmail.com"],
+      from: "Yuzana <noreply@yuzana.ai>",
+      to: ["Timothy.lee@yuzana.ai", "christopherlee973@gmail.com"],
       replyTo: `${name} <${email}>`,
       subject: `Engagement Request: ${name} from ${organization}`,
       html: `
