@@ -12,13 +12,12 @@ export default function WhatWeDo() {
         <div className="container">
           <h1>Clarity in Complexity.</h1>
           <p className="subhead">
-            Most organizations suffer from a fundamental Problem/Solution
-            Mismatch. They face adaptive threats but rely on static tools and
-            fragmented signals.
+            The gap between spending and safety is widening. Organizations face
+            adaptive threats but rely on static tools and fragmented signals.
           </p>
           <p className="subhead">
             YUZANA helps leaders reconnect intent with execution through Minimum
-            Effective Cybersecurity—optimizing resources to deliver maximum
+            Effective Security—optimizing resources to deliver maximum
             resilience with zero waste.
           </p>
         </div>
@@ -28,9 +27,9 @@ export default function WhatWeDo() {
         <div className="container">
           <h2>Advisory. Architecture. Alignment.</h2>
           <p>
-            We do not sell products or predefined playbooks. We work directly
-            with boards, executives, and security leaders to design security
-            that holds under pressure.
+            We do not sell products or predefined playbooks. We partner with
+            executive leadership and security teams to design defenses that hold
+            under pressure.
           </p>
         </div>
       </section>
@@ -41,27 +40,30 @@ export default function WhatWeDo() {
             <div className="grid-item">
               <h3>Strategic Advisory & Governance</h3>
               <p>
-                We translate technical reality into executive clarity — helping
+                We translate technical reality into executive clarity—helping
                 leadership understand not just what is happening, but what
-                matters and why.
+                matters and why. We align defensive strategy with the specific
+                operational reality of your business.
               </p>
             </div>
 
             <div className="grid-item">
-              <h3>Security Operations Design</h3>
+              <h3>Security Operations Evolution</h3>
               <p>
-                We design and refine SOCs based on how incidents actually
-                unfold. Human judgment, clear escalation, and decisive action
-                come first — automation supports, not replaces.
+                We architect and operationalize the transition to the Autonomous
+                SOC. Whether building internally or managing partners, we
+                establish the model where automation handles the volume and
+                human judgment handles the consequence.
               </p>
             </div>
 
             <div className="grid-item">
               <h3>Executive Risk Clarity</h3>
               <p>
-                We provide unvarnished assessments of exposure and resilience.
-                No fear-based scoring. No dashboards for show. Just the ground
-                truth leaders need to act.
+                We bridge the language gap between the SOC and the
+                Boardroom—translating technical threats into business
+                consequence. No fear-based scoring. No dashboards for show. Just
+                the ground truth leaders need to make decisions.
               </p>
             </div>
           </div>
