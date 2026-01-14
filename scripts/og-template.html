@@ -2,6 +2,7 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; }
     body { background: #ccc; padding: 20px; }
@@ -12,17 +13,34 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
     }
-    .og-image span {
+    .og-image .logo {
       font-family: 'Playfair Display', serif;
       font-size: 120px;
       color: #1A1A1D;
+      letter-spacing: 4px;
+    }
+    .og-image .accent-line {
+      width: 80px;
+      height: 3px;
+      background: #C8553D;
+      margin-top: 24px;
+    }
+    .og-image .tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      color: #666;
+      margin-top: 20px;
+      font-weight: 300;
     }
   </style>
 </head>
 <body>
   <div class="og-image">
-    <span>YUZANA</span>
+    <span class="logo">YUZANA</span>
+    <div class="accent-line"></div>
+    <span class="tagline">Protection. Defined by Outcome, Not Activity.</span>
   </div>
 </body>
 </html>

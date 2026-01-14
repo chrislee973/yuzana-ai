@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Favicon Template - YUZANA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #888;
+      padding: 40px;
+      font-family: -apple-system, sans-serif;
+    }
+    h1 {
+      color: #fff;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    p {
+      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .section {
+      margin-bottom: 60px;
+    }
+
+    /* Favicon base */
+    .favicon {
+      background: #1A1A1D;
+      color: #F5F5F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Sizes */
+    .favicon-16 {
+      width: 16px;
+      height: 16px;
+      font-size: 12px;
+    }
+    .favicon-32 {
+      width: 32px;
+      height: 32px;
+      font-size: 22px;
+    }
+    .favicon-180 {
+      width: 180px;
+      height: 180px;
+      font-size: 120px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h1>1. Apple Touch Icon (180x180)</h1>
+    <p>Right-click → Inspect → Capture node screenshot → Save as: src/app/apple-icon.png</p>
+    <div class="favicon favicon-180">Y</div>
+  </div>
+
+  <div class="section">
+    <h1>2. Favicon 32x32</h1>
+    <p>Right-click → Inspect → Capture node screenshot → Save as: src/app/icon.png</p>
+    <div class="favicon favicon-32">Y</div>
+  </div>
+
+  <div class="section">
+    <h1>3. Favicon 16x16 (optional, for .ico)</h1>
+    <p>If you want a separate 16px version. Next.js will auto-generate from icon.png otherwise.</p>
+    <div class="favicon favicon-16">Y</div>
+  </div>
+
+</body>
+</html>

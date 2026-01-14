@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Favicon Options - YUZANA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #2A2A2D;
+      padding: 40px;
+      font-family: 'Inter', sans-serif;
+      color: #F5F5F0;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+    .subtitle {
+      text-align: center;
+      color: #999;
+      margin-bottom: 40px;
+      font-size: 14px;
+    }
+    .option {
+      margin-bottom: 50px;
+    }
+    .option h2 {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #C8553D;
+    }
+    .option p {
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 16px;
+    }
+    .preview-row {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+    .size-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .size-label {
+      font-size: 12px;
+      color: #666;
+    }
+
+    /* Base favicon styles */
+    .favicon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Sizes */
+    .favicon-16 { width: 16px; height: 16px; font-size: 12px; }
+    .favicon-32 { width: 32px; height: 32px; font-size: 22px; }
+    .favicon-64 { width: 64px; height: 64px; font-size: 44px; }
+    .favicon-180 { width: 180px; height: 180px; font-size: 120px; }
+
+    /* Browser tab mockup */
+    .browser-tab {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #3A3A3D;
+      padding: 8px 16px;
+      border-radius: 8px 8px 0 0;
+      font-size: 13px;
+      color: #F5F5F0;
+    }
+    .browser-tab .favicon {
+      border-radius: 2px;
+    }
+
+    /* ========== OPTION STYLES ========== */
+
+    /* Option 1: Y on paper white */
+    .opt1 {
+      background: #F5F5F0;
+      color: #1A1A1D;
+    }
+
+    /* Option 2: Y on deep indigo */
+    .opt2 {
+      background: #1A1A1D;
+      color: #F5F5F0;
+    }
+
+    /* Option 3: Y on clay orange */
+    .opt3 {
+      background: #C8553D;
+      color: #F5F5F0;
+    }
+
+    /* Option 4: Y with orange accent (paper bg) */
+    .opt4 {
+      background: #F5F5F0;
+      color: #C8553D;
+    }
+
+    /* Option 5: Geometric - square with Y */
+    .opt5 {
+      background: #1A1A1D;
+      color: #F5F5F0;
+      border-radius: 4px;
+    }
+    .favicon-16.opt5 { border-radius: 2px; }
+    .favicon-32.opt5 { border-radius: 3px; }
+    .favicon-64.opt5 { border-radius: 6px; }
+    .favicon-180.opt5 { border-radius: 20px; }
+
+    /* Option 6: Circle with Y */
+    .opt6 {
+      background: #1A1A1D;
+      color: #F5F5F0;
+      border-radius: 50%;
+    }
+
+    /* Option 7: Y with underline accent */
+    .opt7 {
+      background: #F5F5F0;
+      color: #1A1A1D;
+      position: relative;
+      flex-direction: column;
+    }
+    .opt7::after {
+      content: '';
+      position: absolute;
+      bottom: 15%;
+      width: 40%;
+      height: 6%;
+      background: #C8553D;
+    }
+
+    /* Option 8: Split - half indigo half paper */
+    .opt8 {
+      background: linear-gradient(135deg, #1A1A1D 50%, #F5F5F0 50%);
+      color: #C8553D;
+      font-weight: 600;
+    }
+
+    /* Option 9: Bordered */
+    .opt9 {
+      background: #F5F5F0;
+      color: #1A1A1D;
+      border: 2px solid #C8553D;
+    }
+    .favicon-16.opt9 { border-width: 1px; }
+    .favicon-32.opt9 { border-width: 2px; }
+    .favicon-64.opt9 { border-width: 3px; }
+    .favicon-180.opt9 { border-width: 6px; }
+
+    /* Option 10: Minimal - just Y, no background (for dark tabs) */
+    .opt10 {
+      background: transparent;
+      color: #F5F5F0;
+    }
+    .opt10-light {
+      background: transparent;
+      color: #1A1A1D;
+    }
+  </style>
+</head>
+<body>
+  <h1>Favicon Options for YUZANA</h1>
+  <p class="subtitle">Showing at 16px (tab), 32px (tab @2x), 64px (preview), and 180px (iOS home screen)</p>
+
+  <!-- Option 1 -->
+  <div class="option">
+    <h2>Option 1: Y on Paper White</h2>
+    <p>Clean, matches site background. May blend into light browser themes.</p>
+    <div class="preview-row">
+      <div class="browser-tab">
+        <div class="favicon favicon-16 opt1">Y</div>
+        <span>YUZANA.AI</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-32 opt1">Y</div>
+        <span class="size-label">32px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-64 opt1">Y</div>
+        <span class="size-label">64px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-180 opt1">Y</div>
+        <span class="size-label">180px (iOS)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 2 -->
+  <div class="option">
+    <h2>Option 2: Y on Deep Indigo</h2>
+    <p>High contrast, stands out in browser tabs. Professional look.</p>
+    <div class="preview-row">
+      <div class="browser-tab">
+        <div class="favicon favicon-16 opt2">Y</div>
+        <span>YUZANA.AI</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-32 opt2">Y</div>
+        <span class="size-label">32px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-64 opt2">Y</div>
+        <span class="size-label">64px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-180 opt2">Y</div>
+        <span class="size-label">180px (iOS)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 3 -->
+  <div class="option">
+    <h2>Option 3: Y on Clay Orange</h2>
+    <p>Bold, uses your accent color. Very distinctive in tabs.</p>
+    <div class="preview-row">
+      <div class="browser-tab">
+        <div class="favicon favicon-16 opt3">Y</div>
+        <span>YUZANA.AI</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-32 opt3">Y</div>
+        <span class="size-label">32px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-64 opt3">Y</div>
+        <span class="size-label">64px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-180 opt3">Y</div>
+        <span class="size-label">180px (iOS)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 4 -->
+  <div class="option">
+    <h2>Option 4: Orange Y on Paper White</h2>
+    <p>Accent color Y, light background. Subtle but branded.</p>
+    <div class="preview-row">
+      <div class="browser-tab">
+        <div class="favicon favicon-16 opt4">Y</div>
+        <span>YUZANA.AI</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-32 opt4">Y</div>
+        <span class="size-label">32px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-64 opt4">Y</div>
+        <span class="size-label">64px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-180 opt4">Y</div>
+        <span class="size-label">180px (iOS)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 5 -->
+  <div class="option">
+    <h2>Option 5: Rounded Square (Dark)</h2>
+    <p>Modern app-style icon. Works great on iOS home screen.</p>
+    <div class="preview-row">
+      <div class="browser-tab">
+        <div class="favicon favicon-16 opt5">Y</div>
+        <span>YUZANA.AI</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-32 opt5">Y</div>
+        <span class="size-label">32px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-64 opt5">Y</div>
+        <span class="size-label">64px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-180 opt5">Y</div>
+        <span class="size-label">180px (iOS)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 6 -->
+  <div class="option">
+    <h2>Option 6: Circle (Dark)</h2>
+    <p>Softer feel, distinctive shape in tabs.</p>
+    <div class="preview-row">
+      <div class="browser-tab">
+        <div class="favicon favicon-16 opt6">Y</div>
+        <span>YUZANA.AI</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-32 opt6">Y</div>
+        <span class="size-label">32px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-64 opt6">Y</div>
+        <span class="size-label">64px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-180 opt6">Y</div>
+        <span class="size-label">180px (iOS)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 7 -->
+  <div class="option">
+    <h2>Option 7: Y with Orange Underline</h2>
+    <p>Matches your OG image style with the accent line.</p>
+    <div class="preview-row">
+      <div class="browser-tab">
+        <div class="favicon favicon-16 opt7">Y</div>
+        <span>YUZANA.AI</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-32 opt7">Y</div>
+        <span class="size-label">32px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-64 opt7">Y</div>
+        <span class="size-label">64px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-180 opt7">Y</div>
+        <span class="size-label">180px (iOS)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 8 -->
+  <div class="option">
+    <h2>Option 8: Diagonal Split</h2>
+    <p>Dynamic, modern. Orange Y on split background.</p>
+    <div class="preview-row">
+      <div class="browser-tab">
+        <div class="favicon favicon-16 opt8">Y</div>
+        <span>YUZANA.AI</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-32 opt8">Y</div>
+        <span class="size-label">32px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-64 opt8">Y</div>
+        <span class="size-label">64px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-180 opt8">Y</div>
+        <span class="size-label">180px (iOS)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 9 -->
+  <div class="option">
+    <h2>Option 9: Bordered</h2>
+    <p>Paper white with orange border. Clean but defined.</p>
+    <div class="preview-row">
+      <div class="browser-tab">
+        <div class="favicon favicon-16 opt9">Y</div>
+        <span>YUZANA.AI</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-32 opt9">Y</div>
+        <span class="size-label">32px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-64 opt9">Y</div>
+        <span class="size-label">64px</span>
+      </div>
+      <div class="size-group">
+        <div class="favicon favicon-180 opt9">Y</div>
+        <span class="size-label">180px (iOS)</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

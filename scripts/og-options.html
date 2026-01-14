@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OG Image Options - YUZANA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #2A2A2D;
+      padding: 40px;
+      font-family: 'Inter', sans-serif;
+      color: #F5F5F0;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+    .option {
+      margin-bottom: 60px;
+    }
+    .option h2 {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      color: #C8553D;
+    }
+    .option p {
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 16px;
+    }
+
+    /* Base OG image styles */
+    .og-image {
+      width: 1200px;
+      height: 630px;
+      background: #F5F5F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transform: scale(0.5);
+      transform-origin: top left;
+      margin-bottom: -315px;
+    }
+    .og-image .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 120px;
+      color: #1A1A1D;
+      letter-spacing: 4px;
+    }
+    .og-image .tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      color: #666;
+      margin-top: 20px;
+      font-weight: 300;
+    }
+    .og-image .domain {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      color: #999;
+      margin-top: 16px;
+      font-weight: 400;
+    }
+    .og-image .accent-line {
+      width: 80px;
+      height: 3px;
+      background: #C8553D;
+      margin-top: 24px;
+    }
+    .og-image .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-top: 20px;
+    }
+
+    /* Option 3: Gradient background */
+    .og-gradient {
+      background: linear-gradient(135deg, #F5F5F0 0%, #E8E8E3 100%);
+    }
+
+    /* Option 5: Split layout */
+    .og-split {
+      flex-direction: row;
+      justify-content: center;
+      gap: 80px;
+    }
+    .og-split .left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .og-split .divider {
+      width: 2px;
+      height: 200px;
+      background: #D0D0CC;
+    }
+    .og-split .right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .og-split .right .tagline {
+      font-size: 28px;
+      max-width: 400px;
+      line-height: 1.4;
+      margin-top: 0;
+      text-align: left;
+    }
+    .og-split .right .label {
+      margin-top: 24px;
+    }
+
+    /* Option 6: Minimal with corner accent */
+    .og-corner {
+      position: relative;
+    }
+    .og-corner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 120px;
+      height: 120px;
+      border-left: 4px solid #C8553D;
+      border-top: 4px solid #C8553D;
+    }
+    .og-corner::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      border-right: 4px solid #C8553D;
+      border-bottom: 4px solid #C8553D;
+    }
+  </style>
+</head>
+<body>
+  <h1>OG Image Options for YUZANA</h1>
+
+  <!-- Current -->
+  <div class="option">
+    <h2>Current (Baseline)</h2>
+    <p>Just the logo, centered</p>
+    <div class="og-image">
+      <span class="logo">YUZANA</span>
+    </div>
+  </div>
+
+  <!-- Option 1: With tagline -->
+  <div class="option">
+    <h2>Option 1: Add Tagline</h2>
+    <p>Logo + tagline gives context about what you do</p>
+    <div class="og-image">
+      <span class="logo">YUZANA</span>
+      <span class="tagline">Protection. Defined by Outcome, Not Activity.</span>
+    </div>
+  </div>
+
+  <!-- Option 2: With accent line -->
+  <div class="option">
+    <h2>Option 2: Add Accent Line</h2>
+    <p>Logo + clay orange accent line for visual interest</p>
+    <div class="og-image">
+      <span class="logo">YUZANA</span>
+      <div class="accent-line"></div>
+    </div>
+  </div>
+
+  <!-- Option 1+2: Tagline + accent -->
+  <div class="option">
+    <h2>Option 1+2: Tagline + Accent Line (Recommended)</h2>
+    <p>Clean, informative, adds visual interest</p>
+    <div class="og-image">
+      <span class="logo">YUZANA</span>
+      <div class="accent-line"></div>
+      <span class="tagline">Protection. Defined by Outcome, Not Activity.</span>
+    </div>
+  </div>
+
+  <!-- Option 3: Gradient -->
+  <div class="option">
+    <h2>Option 3: Subtle Gradient Background</h2>
+    <p>Adds depth without being busy</p>
+    <div class="og-image og-gradient">
+      <span class="logo">YUZANA</span>
+      <div class="accent-line"></div>
+      <span class="tagline">Protection. Defined by Outcome, Not Activity.</span>
+    </div>
+  </div>
+
+  <!-- Option 4: With domain -->
+  <div class="option">
+    <h2>Option 4: Include Domain</h2>
+    <p>Reinforces the URL</p>
+    <div class="og-image">
+      <span class="logo">YUZANA</span>
+      <div class="accent-line"></div>
+      <span class="domain">yuzana.ai</span>
+    </div>
+  </div>
+
+  <!-- Option 5: Split layout -->
+  <div class="option">
+    <h2>Option 5: Split Layout</h2>
+    <p>More dynamic, professional composition</p>
+    <div class="og-image og-split">
+      <div class="left">
+        <span class="logo">YUZANA</span>
+      </div>
+      <div class="divider"></div>
+      <div class="right">
+        <span class="tagline">Protection. Defined by Outcome, Not Activity.</span>
+        <span class="label">Security Advisory</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 6: Corner accents -->
+  <div class="option">
+    <h2>Option 6: Corner Accents</h2>
+    <p>Geometric frame adds sophistication</p>
+    <div class="og-image og-corner">
+      <span class="logo">YUZANA</span>
+      <span class="tagline">Protection. Defined by Outcome, Not Activity.</span>
+    </div>
+  </div>
+
+  <!-- Option 7: Full treatment -->
+  <div class="option">
+    <h2>Option 7: Full Treatment</h2>
+    <p>Gradient + corner accents + tagline + label</p>
+    <div class="og-image og-gradient og-corner">
+      <span class="logo">YUZANA</span>
+      <div class="accent-line"></div>
+      <span class="tagline">Protection. Defined by Outcome, Not Activity.</span>
+      <span class="label">Security Advisory</span>
+    </div>
+  </div>
+
+</body>
+</html>
