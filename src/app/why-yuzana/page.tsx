@@ -61,8 +61,6 @@ export default function WhyYuzana() {
                 faces a unique threat landscape; generic templates just create
                 bloat. We design for the Minimum Effective posture—architecting
                 a defense that is precision-matched to your specific reality.
-              </p>
-              <p>
                 We strip away the excess to build a system that is lightweight,
                 agile, and personalized to the threats you actually face.
               </p>
