@@ -16,8 +16,9 @@ export default function WhyYuzana() {
           <span className="eyebrow">The Philosophy</span>
           <h1>Noise Is the Enemy.</h1>
           <p className="hero-sub">
-            The industry is drowning in data but starving for context. YUZANA
-            exists to counter the &ldquo;Security Theater&rdquo; mindset.
+            The industry is obsessed with volume—more tools, more alerts, more
+            compliance checklists. YUZANA exists to filter the signal from the
+            noise and counter the &ldquo;Security Theater&rdquo; mindset.
           </p>
         </header>
       </div>
@@ -51,18 +52,17 @@ export default function WhyYuzana() {
         <section className="philosophy-section">
           <div className="belief-block">
             <div className="belief-title-wrapper">
-              <span className="eyebrow">02 — The Barrier</span>
-              <h2 className="belief-title">The Trust Gap.</h2>
+              <span className="eyebrow">02 — THE DISCIPLINE</span>
+              <h2 className="belief-title">Minimum Effective Security.</h2>
             </div>
             <div className="belief-content">
               <p>
-                Why is the modern SOC still manually intensive? Because leaders
-                do not trust their tools to act alone.
-              </p>
-              <p>
-                We bridge this gap by building <strong>High-Fidelity Context</strong>
-                —aligning defenses to business physiology so that automation
-                becomes safe, surgical, and trusted.
+                Complexity is the hiding place of failure. Every organization
+                faces a unique threat landscape; generic templates just create
+                bloat. We design for the Minimum Effective posture—architecting
+                a defense that is precision-matched to your specific reality.
+                We strip away the excess to build a system that is lightweight,
+                agile, and personalized to the threats you actually face.
               </p>
             </div>
           </div>
@@ -83,8 +83,11 @@ export default function WhyYuzana() {
               </p>
               <p>
                 Our vision is the <strong>Autonomous SOC</strong>: a self-healing
-                ecosystem where routine threats are neutralized instantly without
-                human intervention.
+                ecosystem where routine threats are neutralized at machine speed.
+                We move from &ldquo;Human-in-the-Loop&rdquo; (bottleneck) to
+                &ldquo;Human-on-the-Loop&rdquo; (oversight)—preserving human
+                judgment for where it matters most: high-stakes decision making
+                and complex threat hunting.
               </p>
               <p>
                 This approach solves the critical capacity gap—reducing the
@@ -99,7 +102,7 @@ export default function WhyYuzana() {
       <div className="container">
         <section className="manifesto-close">
           <span className="eyebrow">The Outcome</span>
-          <h3>Minimum Effective Security.</h3>
+          <h3>The End of Complexity.</h3>
           <p>
             Complexity is the hiding place of failure.<br />
             Fewer tools. Less noise. Total confidence.

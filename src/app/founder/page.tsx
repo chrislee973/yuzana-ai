@@ -63,26 +63,11 @@ export default function Founder() {
               <p>
                 Timothy founded the LA Cyber Lab, the nation&apos;s first
                 city-led public-private partnership, to fundamentally change how
-                government and business share threat intelligence.
+                government and business share threat intelligence. A frequent
+                speaker on governance and crisis leadership, he has been
+                recognized as a Cybersecurity Leader of the Year and a
+                Statescoop 50 Award recipient.
               </p>
-
-              <p>
-                Timothy is a frequent speaker at various national and
-                international conferences.
-              </p>
-
-              <ul className="credentials-list">
-                <li>Former CISO, City of Los Angeles</li>
-                <li>Founder & Board Member, LA Cyber Lab</li>
-                <li>
-                  Former CISO, Port of Los Angeles (Established first seaport
-                  CSOC)
-                </li>
-                <li>
-                  Cybersecurity Leader of The Year & Statescoop 50 Award
-                  Recipient
-                </li>
-              </ul>
             </div>
 
             <div className="bio-photo">
