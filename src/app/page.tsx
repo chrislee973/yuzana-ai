@@ -7,9 +7,9 @@ export default function Home() {
         <div className="container">
           <h1>Protection. Defined by Outcome, Not Activity.</h1>
           <p className="subhead">
-            Security advisory for leaders responsible for critical missions.
-            Built on experience protecting one of the most complex public
-            environments in the United States.
+            Security advisory from the former{" "}
+            <strong>Chief Information Security Officer of the City of Los Angeles</strong>.
+            Designed for leaders responsible for complex, high-stakes environments.
           </p>
 
           <div className="cta-buttons">

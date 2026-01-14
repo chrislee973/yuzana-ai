@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 interface FormState {
   name: string;
+  email: string;
   organization: string;
   role: string;
   ambiguity: string;
@@ -14,6 +15,7 @@ type FormVisibility = "visible" | "hiding" | "hidden";
 export default function EngageForm() {
   const [formState, setFormState] = useState<FormState>({
     name: "",
+    email: "",
     organization: "",
     role: "",
     ambiguity: "",
@@ -200,6 +202,20 @@ export default function EngageForm() {
             name="name"
             required
             value={formState.name}
+            onChange={handleChange}
+            onInvalid={handleInvalid}
+            onInput={handleInput}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            value={formState.email}
             onChange={handleChange}
             onInvalid={handleInvalid}
             onInput={handleInput}
