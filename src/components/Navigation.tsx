@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
@@ -58,7 +59,14 @@ export default function Navigation() {
     <nav className={isScrolled ? "scrolled" : ""}>
       <div className="nav-container">
         <Link href="/" className="logo">
-          YUZANA
+          <Image
+            src="/yuzanalogo(blacktext).svg"
+            alt="YUZANA"
+            width={200}
+            height={86}
+            priority
+            style={{ height: '48px', width: 'auto', display: 'block' }}
+          />
         </Link>
         <button
           className="menu-toggle"

@@ -159,6 +159,8 @@ nav.scrolled {
     color: #1A1A1D;
     text-decoration: none;
     letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
 }
 
 .nav-links {
