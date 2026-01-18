@@ -52,14 +52,40 @@ export default function WhyYuzana() {
         <section className="philosophy-section">
           <div className="belief-block">
             <div className="belief-title-wrapper">
-              <span className="eyebrow">02 — THE DISCIPLINE</span>
+              <span className="eyebrow">02 — THE DOCTRINE</span>
+              <h2 className="belief-title">Contextual Intelligence.</h2>
+            </div>
+            <div className="belief-content">
+              <p>
+                Effective decision-making relies on truth, not volume.
+              </p>
+              <p>
+                We practice the doctrine of <strong>Situational Convergence</strong>—deeply
+                mapping your internal Protection Domain (&ldquo;Know Yourself&rdquo;)
+                and filtering for strictly relevant external Threat Intelligence
+                (&ldquo;Know Your Enemy&rdquo;).
+              </p>
+              <p>
+                We strip away global noise to integrate these two realities into
+                a single pane of glass—replacing anxiety with clarity.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div className="container">
+        <section className="philosophy-section">
+          <div className="belief-block">
+            <div className="belief-title-wrapper">
+              <span className="eyebrow">03 — THE DISCIPLINE</span>
               <h2 className="belief-title">Minimum Effective Security.</h2>
             </div>
             <div className="belief-content">
               <p>
                 Complexity is the hiding place of failure. Every organization
                 faces a unique threat landscape; generic templates just create
-                bloat. We design for the Minimum Effective posture—architecting
+                bloat. We design for the <strong>Minimum Effective Posture</strong>—architecting
                 a defense that is precision-matched to your specific reality.
                 We strip away the excess to build a system that is lightweight,
                 agile, and personalized to the threats you actually face.
@@ -73,7 +99,7 @@ export default function WhyYuzana() {
         <div className="container">
           <div className="belief-block">
             <div className="belief-title-wrapper">
-              <span className="eyebrow">03 — The Vision</span>
+              <span className="eyebrow">04 — THE VISION</span>
               <h2 className="belief-title">The Dark SOC.</h2>
             </div>
             <div className="belief-content">
