@@ -61,9 +61,9 @@ export default function WhyYuzana() {
               </p>
               <p>
                 We practice the doctrine of <strong>Situational Convergence</strong>—deeply
-                mapping your internal Protection Domain (&ldquo;Know Yourself&rdquo;)
+                mapping your internal Protection Domain (&ldquo;<strong>Know Yourself</strong>&rdquo;)
                 and filtering for strictly relevant external Threat Intelligence
-                (&ldquo;Know Your Enemy&rdquo;).
+                (&ldquo;<strong>Know Your Enemy</strong>&rdquo;).
               </p>
               <p>
                 We strip away global noise to integrate these two realities into
