@@ -56,14 +56,14 @@ export default function WhyYuzana() {
               <h2 className="belief-title">Contextual Intelligence.</h2>
             </div>
             <div className="belief-content">
+              <p>Effective decision-making relies on truth, not volume.</p>
               <p>
-                Effective decision-making relies on truth, not volume.
-              </p>
-              <p>
-                We practice the doctrine of <strong>Situational Convergence</strong>—deeply
-                mapping your internal Protection Domain (&ldquo;<strong>Know Yourself</strong>&rdquo;)
-                and filtering for strictly relevant external Threat Intelligence
-                (&ldquo;<strong>Know Your Enemy</strong>&rdquo;).
+                We practice the doctrine of{" "}
+                <strong>Situational Convergence</strong>—deeply mapping your
+                internal Protection Domain (&ldquo;
+                <strong>Know Yourself</strong>&rdquo;) and filtering for
+                strictly relevant external Threat Intelligence (&ldquo;
+                <strong>Know Your Enemy</strong>&rdquo;).
               </p>
               <p>
                 We strip away global noise to integrate these two realities into
@@ -85,9 +85,10 @@ export default function WhyYuzana() {
               <p>
                 Complexity is the hiding place of failure. Every organization
                 faces a unique threat landscape; generic templates just create
-                bloat. We design for the <strong>Minimum Effective Posture</strong>—architecting
-                a defense that is precision-matched to your specific reality.
-                We strip away the excess to build a system that is lightweight,
+                bloat. We design for the{" "}
+                <strong>Minimum Effective Posture</strong>—architecting a
+                defense that is precision-matched to your specific reality. We
+                strip away the excess to build a system that is lightweight,
                 agile, and personalized to the threats you actually face.
               </p>
             </div>
@@ -108,12 +109,12 @@ export default function WhyYuzana() {
                 autonomous operations. Cybersecurity must follow.
               </p>
               <p>
-                Our vision is the <strong>Autonomous SOC</strong>: a self-healing
-                ecosystem where routine threats are neutralized at machine speed.
-                We move from &ldquo;Human-in-the-Loop&rdquo; (bottleneck) to
-                &ldquo;Human-on-the-Loop&rdquo; (oversight)—preserving human
-                judgment for where it matters most: high-stakes decision making
-                and complex threat hunting.
+                Our vision is the <strong>Autonomous SOC</strong>: a
+                self-healing ecosystem where routine threats are neutralized at
+                machine speed. We move from &ldquo;Human-in-the-Loop&rdquo;
+                (bottleneck) to &ldquo;Human-on-the-Loop&rdquo;
+                (oversight)—preserving human judgment for where it matters most:
+                high-stakes decision making and complex threat hunting.
               </p>
               <p>
                 This approach solves the critical capacity gap—reducing the
@@ -130,7 +131,8 @@ export default function WhyYuzana() {
           <span className="eyebrow">The Outcome</span>
           <h3>The End of Complexity.</h3>
           <p>
-            Complexity is the hiding place of failure.<br />
+            Complexity is the hiding place of failure.
+            <br />
             Fewer tools. Less noise. Total confidence.
           </p>
         </section>
