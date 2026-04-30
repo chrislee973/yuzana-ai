@@ -1,24 +1,51 @@
 import Link from "next/link";
 
 export default function Home() {
+  const heroStats = [
+    {
+      value: "1B+",
+      label: "Security events processed daily at LA's Integrated SOC",
+    },
+    {
+      value: "#1",
+      label: "Nation's first city-led public-private cyber lab",
+    },
+    {
+      value: "2nd",
+      label: "Largest US city CISO experience",
+    },
+  ];
+
   return (
     <main>
       <section className="hero">
         <div className="container">
-          <h1>Protection. Defined by Outcome, Not Activity.</h1>
+          <span className="hero-eyebrow">
+            Advisory · Architecture · Alignment
+          </span>
+          <h1>Security That Holds. Under Real Pressure.</h1>
           <p className="subhead">
-            Security advisory from the former{" "}
-            <strong>Chief Information Security Officer of the City of Los Angeles</strong>.
-            Designed for leaders responsible for complex, high-stakes environments.
+            Most security programs are built to look impressive. YUZANA is
+            built to work — when the stakes are highest, the threat is real,
+            and the margin for error is zero.
           </p>
 
           <div className="cta-buttons">
-            <Link href="/why-yuzana" className="btn btn-primary">
-              Read the Philosophy
+            <Link href="/engage" className="btn btn-primary">
+              Request a Conversation
             </Link>
-            <Link href="/founder" className="btn btn-secondary">
-              The Founder
+            <Link href="/why-yuzana" className="btn btn-secondary">
+              Read the Philosophy →
             </Link>
+          </div>
+
+          <div className="hero-stats" aria-label="Selected founder experience">
+            {heroStats.map((stat) => (
+              <div className="hero-stat" key={stat.value}>
+                <span className="hero-stat-value">{stat.value}</span>
+                <p className="hero-stat-label">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -49,7 +76,10 @@ export default function Home() {
             security is not about fear, but about the ability to operate with
             confidence.&rdquo;
           </blockquote>
-          <cite>— Timothy Lee</cite>
+          <cite>
+            — Timothy Lee, Founder &amp; Principal · Former CISO, City of Los
+            Angeles
+          </cite>
         </div>
       </section>
     </main>

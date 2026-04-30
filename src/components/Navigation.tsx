@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/what-we-do", label: "What We Do" },
+  { href: "/work", label: "Work" },
   { href: "/why-yuzana", label: "Why YUZANA" },
   { href: "/founder", label: "Founder" },
   { href: "/engage", label: "Engage" },
@@ -47,10 +48,6 @@ export default function Navigation() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, [isMenuOpen]);
 
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [pathname]);
-
   const toggleMenu = () => {
     setIsMenuOpen((open) => !open);
   };
@@ -88,6 +85,7 @@ export default function Navigation() {
                 <Link
                   href={item.href}
                   className={isActive ? "active" : undefined}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
