@@ -328,6 +328,10 @@ nav.scrolled {
   transform: scaleX(1);
 }
 
+.nav-links a.nav-cta::after {
+  display: none;
+}
+
 .menu-toggle {
   display: none;
   padding: 0.4rem 0;
@@ -673,21 +677,48 @@ nav.scrolled {
   align-items: start;
 }
 
-.engage-panel {
-  border: 1px solid var(--rule);
-  background: var(--off-white);
-  padding: 1.5rem;
+.engage-sidebar {
+  position: sticky;
+  top: calc(var(--nav-height) + 2rem);
 }
 
-.engage-panel ol {
+.engage-sidebar-list {
+  list-style: none;
   margin: 1.25rem 0 0;
-  padding-left: 1.15rem;
+  padding: 0;
 }
 
-.engage-panel li {
-  margin-bottom: 0.85rem;
-  font-size: 0.92rem;
+.engage-sidebar-list li {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: 0.9rem;
+  align-items: baseline;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.engage-sidebar-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.engage-sidebar-num {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 1.5rem;
+  color: var(--accent-dark);
+  line-height: 1;
+}
+
+.engage-sidebar-list p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
   color: var(--text-secondary);
+}
+
+@media (max-width: 980px) {
+  .engage-sidebar {
+    position: static;
+  }
 }
 
 .contact-form {
@@ -813,7 +844,7 @@ textarea.error:focus {
     align-items: flex-start;
     gap: 0;
     padding: 1rem var(--page-gutter) 1.5rem;
-    background: rgba(250, 249, 246, 0.98);
+    background: var(--warm-white);
     border-bottom: 1px solid var(--rule);
     transform: translateY(calc(-100% - var(--nav-height)));
     opacity: 0;
@@ -838,7 +869,12 @@ textarea.error:focus {
   }
 
   .nav-links a {
+    display: block;
     padding: 0.95rem 0;
+  }
+
+  .nav-links a::after {
+    display: none;
   }
 
   .nav-logo-image {

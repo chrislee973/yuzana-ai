@@ -25,17 +25,26 @@ export default function Engage() {
       <section className="engage-layout">
         <div className="container">
           <div className="engage-grid">
-            <div className="engage-panel">
+            <aside className="engage-sidebar">
               <p className="section-label">When We Typically Engage</p>
-              <ol>
-                <li>Security is a board-level concern.</li>
-                <li>Mission continuity matters more than compliance theater.</li>
+              <ol className="engage-sidebar-list">
                 <li>
-                  Leadership is ready to confront the ground truth of their
-                  environment.
+                  <span className="engage-sidebar-num">01</span>
+                  <p>Security is a board-level concern.</p>
+                </li>
+                <li>
+                  <span className="engage-sidebar-num">02</span>
+                  <p>Mission continuity matters more than compliance theater.</p>
+                </li>
+                <li>
+                  <span className="engage-sidebar-num">03</span>
+                  <p>
+                    Leadership is ready to confront the ground truth of their
+                    environment.
+                  </p>
                 </li>
               </ol>
-            </div>
+            </aside>
 
             <div>
               <EngageForm />
