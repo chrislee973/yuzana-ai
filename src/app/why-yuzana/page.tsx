@@ -11,17 +11,17 @@ export const metadata: Metadata = {
 export default function WhyYuzana() {
   return (
     <main>
-      <div className="container">
-        <header className="philosophy-header">
+      <section className="page-header philosophy-header">
+        <div className="container">
           <span className="eyebrow">The Philosophy</span>
           <h1>Noise Is the Enemy.</h1>
-          <p className="hero-sub">
+          <p className="page-lead philosophy-lead">
             The industry is obsessed with volume—more tools, more alerts, more
             compliance checklists. YUZANA exists to filter the signal from the
             noise and counter the &ldquo;Security Theater&rdquo; mindset.
           </p>
-        </header>
-      </div>
+        </div>
+      </section>
 
       <div className="container">
         <section className="philosophy-section">
@@ -138,14 +138,16 @@ export default function WhyYuzana() {
 
       <section className="cta-section">
         <div className="container">
-          <h2>Ready to restore clarity?</h2>
-          <p className="subhead">
-            Let&apos;s have a conversation about what matters most to your
-            organization.
-          </p>
-          <Link href="/engage" className="btn btn-primary">
-            Start the Conversation
-          </Link>
+          <div className="philosophy-cta-stack">
+            <h2>Ready to restore clarity?</h2>
+            <p className="page-lead">
+              Let&apos;s have a conversation about what matters most to your
+              organization.
+            </p>
+            <Link href="/engage" className="btn btn-primary">
+              Start the Conversation
+            </Link>
+          </div>
         </div>
       </section>
     </main>

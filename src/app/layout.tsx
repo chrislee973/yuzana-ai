@@ -1,27 +1,22 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
+import { Cormorant_Garamond, Jost } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import GlobalEffects from "@/components/GlobalEffects";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const jost = Jost({
+  variable: "--font-jost",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const jetbrains = JetBrains_Mono({
-  variable: "--font-jetbrains",
-  subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -60,7 +55,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${inter.variable} ${jetbrains.variable}`}>
+      <body className={`${cormorant.variable} ${jost.variable}`}>
         <Navigation />
         {children}
         <Footer />

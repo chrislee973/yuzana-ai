@@ -92,15 +92,15 @@ export default function EngageForm() {
   const handleTextareaFocus = (
     e: React.FocusEvent<HTMLTextAreaElement>
   ) => {
-    e.currentTarget.style.borderColor = "#C8553D";
-    e.currentTarget.style.boxShadow = "0 0 0 3px rgba(200, 85, 61, 0.1)";
+    e.currentTarget.style.borderColor = "#B8976A";
+    e.currentTarget.style.boxShadow = "0 0 0 3px rgba(184, 151, 106, 0.12)";
   };
 
   const handleTextareaBlur = (
     e: React.FocusEvent<HTMLTextAreaElement>
   ) => {
     if (!e.currentTarget.value) {
-      e.currentTarget.style.borderColor = "#D0D0CC";
+      e.currentTarget.style.borderColor = "#D7D2CA";
       e.currentTarget.style.boxShadow = "none";
     }
   };
@@ -166,8 +166,8 @@ export default function EngageForm() {
     transition: "opacity 0.5s ease, transform 0.5s ease",
     marginTop: "3rem",
     padding: "2rem",
-    backgroundColor: "#C8553D",
-    color: "#F5F5F0",
+    backgroundColor: "#565453",
+    color: "#FAF9F6",
     textAlign: "center",
   };
 
@@ -176,15 +176,19 @@ export default function EngageForm() {
       {notice && (
         <div
           style={{
-            backgroundColor: "#C8553D",
-            color: "#F5F5F0",
+            backgroundColor: "#F5F3EE",
+            color: "#FAF9F6",
             padding: "1rem",
             textAlign: "center",
             marginBottom: "2rem",
-            borderRadius: "4px",
+            borderLeft: "3px solid #B8976A",
+            backgroundImage:
+              "linear-gradient(to right, rgba(184, 151, 106, 0.14), rgba(184, 151, 106, 0.04))",
           }}
         >
-          <p style={{ margin: 0, fontSize: "0.95rem" }}>{notice}</p>
+          <p style={{ margin: 0, fontSize: "0.95rem", color: "#5A5854" }}>
+            {notice}
+          </p>
         </div>
       )}
 
@@ -275,10 +279,10 @@ export default function EngageForm() {
       </form>
 
       <div id="successMessage" style={successStyle}>
-        <h3 style={{ color: "#F5F5F0", marginBottom: "1rem" }}>
+        <h3 style={{ color: "#FAF9F6", marginBottom: "1rem" }}>
           Thank you for reaching out.
         </h3>
-        <p style={{ color: "#F5F5F0", margin: 0 }}>
+        <p style={{ color: "#FAF9F6", margin: 0 }}>
           We&apos;ll review your message and respond within 48 hours.
         </p>
       </div>

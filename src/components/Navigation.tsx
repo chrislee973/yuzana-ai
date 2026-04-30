@@ -62,7 +62,7 @@ export default function Navigation() {
             width={200}
             height={86}
             priority
-            style={{ height: '48px', width: 'auto', display: 'block' }}
+            className="nav-logo-image"
           />
         </Link>
         <button

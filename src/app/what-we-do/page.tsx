@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import "./what-we-do.css";
 
 export const metadata: Metadata = {
@@ -10,49 +11,52 @@ export const metadata: Metadata = {
 export default function WhatWeDo() {
   return (
     <main>
-      {/* Hero */}
-      <section className="section-spacer">
+      <section className="page-header wwd-header">
         <div className="container">
+          <span className="wwd-eyebrow">What We Do</span>
           <h1>Clarity in Complexity.</h1>
-          <p className="subhead">
+          <p className="page-lead">
             The gap between cybersecurity spending and real safety is widening.
             Organizations face adaptive threats, yet rely on static tools and
             fragmented signals.
           </p>
-          <p className="subhead">
+          <p className="page-lead">
             YUZANA helps leaders reconnect intent with execution through{" "}
-            <strong>Minimum Effective Security</strong>—optimizing resources to
+            <strong>Minimum Effective Security</strong> — optimizing resources to
             deliver maximum resilience with zero waste.
           </p>
         </div>
       </section>
 
-      {/* Core Message */}
-      <section style={{ padding: "4rem 0", backgroundColor: "#fff" }}>
+      <section className="wwd-section">
         <div className="container">
-          <h2>Advisory. Architecture. Alignment.</h2>
-          <p>
-            YUZANA is an <strong>executive cybersecurity advisory firm</strong>{" "}
-            providing strategic guidance, independent judgment, and decision
-            support for complex and high-consequence environments.
-          </p>
-          <p>
-            We do not sell products or predefined playbooks. We partner with
-            executive leadership and security teams to design defenses that hold
-            under pressure.
-          </p>
+          <div className="section-intro">
+            <span className="wwd-eyebrow">Core Position</span>
+            <h2>Advisory. Architecture. Alignment.</h2>
+          </div>
+          <div className="wwd-core-grid">
+            <p>
+              YUZANA is an{" "}
+              <strong>executive cybersecurity advisory firm</strong> providing
+              strategic guidance, independent judgment, and decision support
+              for complex and high-consequence environments.
+            </p>
+            <p>
+              We do not sell products or predefined playbooks. We partner with
+              executive leadership and security teams to design defenses that
+              hold under pressure.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Our Capabilities */}
-      <section className="section-spacer">
+      <section className="wwd-section">
         <div className="container">
-          <div className="wwd-section-heading">
+          <div className="section-intro">
             <span className="wwd-eyebrow">Services</span>
             <h2>Our Capabilities</h2>
           </div>
 
-          {/* 01. Strategic Advisory */}
           <div className="capability-block">
             <div className="capability-title-wrapper">
               <span className="wwd-eyebrow">01</span>
@@ -86,7 +90,6 @@ export default function WhatWeDo() {
             </div>
           </div>
 
-          {/* 02. Operational Architecture */}
           <div className="capability-block">
             <div className="capability-title-wrapper">
               <span className="wwd-eyebrow">02</span>
@@ -121,7 +124,6 @@ export default function WhatWeDo() {
             </div>
           </div>
 
-          {/* 03. Executive Risk Clarity */}
           <div className="capability-block">
             <div className="capability-title-wrapper">
               <span className="wwd-eyebrow">03</span>
@@ -156,15 +158,14 @@ export default function WhatWeDo() {
         </div>
       </section>
 
-      {/* How We Engage */}
-      <section style={{ padding: "6rem 0", backgroundColor: "#fff" }}>
+      <section className="wwd-section wwd-section-framed">
         <div className="container">
-          <div className="wwd-section-heading">
+          <div className="section-intro">
             <span className="wwd-eyebrow">Engagement</span>
             <h2>How We Engage</h2>
           </div>
 
-          <p className="engage-intro" style={{ marginTop: "3rem" }}>
+          <p className="engage-intro">
             YUZANA operates on a <strong>principal-led model</strong>. We do
             not delegate advisory work to junior consultants.
           </p>
@@ -196,13 +197,12 @@ export default function WhatWeDo() {
         </div>
       </section>
 
-      {/* Our Principles */}
       <section className="wwd-dark-section">
         <div className="container">
-          <span className="wwd-eyebrow" style={{ color: "rgba(245, 245, 240, 0.6)" }}>
-            Foundation
-          </span>
-          <h2>Our Principles</h2>
+          <div className="section-intro">
+            <span className="wwd-eyebrow wwd-eyebrow-inverse">Foundation</span>
+            <h2>Our Principles</h2>
+          </div>
           <ul className="principles-list">
             <li>
               <span className="principle-name">Advisory Only:</span> We provide
@@ -218,6 +218,19 @@ export default function WhatWeDo() {
               the language of leadership and the Board—not the helpdesk.
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section className="cta-band">
+        <div className="cta-band-inner">
+          <h2>&ldquo;Independent advice. Principal-led judgment.&rdquo;</h2>
+          <p>
+            If the stakes are high and the margin for error is small, the work
+            begins with clarity.
+          </p>
+          <Link href="/engage" className="btn btn-white">
+            Request a Conversation
+          </Link>
         </div>
       </section>
     </main>

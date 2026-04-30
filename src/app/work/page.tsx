@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { Landmark, Anchor, Shield, Handshake } from "lucide-react";
 import "./work.css";
 
 export const metadata: Metadata = {
@@ -13,21 +14,25 @@ const environments = [
     title: "Municipal Government",
     description:
       "City-scale infrastructure protecting millions of residents and critical civic systems.",
+    Icon: Landmark,
   },
   {
     title: "Critical Port Infrastructure",
     description:
       "The busiest container port in the Western Hemisphere — operational continuity is non-negotiable.",
+    Icon: Anchor,
   },
   {
     title: "Law Enforcement",
     description:
       "High-sensitivity environments requiring precision architecture and mission-critical uptime.",
+    Icon: Shield,
   },
   {
     title: "Public-Private Partnership",
     description:
       "Designing the frameworks through which government and business share real threat intelligence.",
+    Icon: Handshake,
   },
 ];
 
@@ -71,17 +76,18 @@ const engagements = [
       "Architecture Review",
       "Sensitive Environments",
     ],
+    active: true,
   },
 ];
 
 export default function WorkPage() {
   return (
     <main>
-      <section className="work-hero">
+      <section className="page-header work-hero">
         <div className="container">
           <span className="work-eyebrow">Selected Work</span>
           <h1>Environments Where Failure Is Not an Option.</h1>
-          <p className="subhead">
+          <p className="page-lead">
             YUZANA has operated at the intersection of complex infrastructure,
             public accountability, and adversarial pressure. The following
             reflects the types of environments and challenges we have been
@@ -92,25 +98,34 @@ export default function WorkPage() {
 
       <section className="work-section">
         <div className="container">
-          <div className="work-section-heading">
+          <div className="section-intro work-section-heading">
             <span className="work-eyebrow">Where We&apos;ve Operated</span>
-            <h2>High-stakes environments demand a different kind of security leadership.</h2>
+            <h2>
+              High-stakes environments demand a different kind of security
+              leadership.
+            </h2>
           </div>
 
           <div className="work-environment-grid">
-            {environments.map((environment) => (
-              <article className="work-card" key={environment.title}>
-                <h3>{environment.title}</h3>
-                <p>{environment.description}</p>
-              </article>
-            ))}
+            {environments.map((environment) => {
+              const Icon = environment.Icon;
+              return (
+                <article className="work-card" key={environment.title}>
+                  <span className="work-card-icon" aria-hidden="true">
+                    <Icon strokeWidth={1.25} />
+                  </span>
+                  <h3>{environment.title}</h3>
+                  <p>{environment.description}</p>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
 
       <section className="work-section work-section-muted">
         <div className="container">
-          <div className="work-section-heading">
+          <div className="section-intro work-section-heading">
             <span className="work-eyebrow">Representative Engagements</span>
             <p className="work-section-intro">
               Details are held in confidence. Scope and outcomes are shared at
@@ -121,13 +136,23 @@ export default function WorkPage() {
           <div className="work-engagements">
             {engagements.map((engagement) => (
               <article className="work-engagement" key={engagement.number}>
-                <div className="work-engagement-meta">
+                <div className="work-engagement-sidebar">
                   <span className="work-engagement-number">
                     {engagement.number}
                   </span>
-                  <p className="work-engagement-context">{engagement.context}</p>
                 </div>
                 <div className="work-engagement-body">
+                  <div className="work-engagement-meta">
+                    <p className="work-engagement-context">
+                      {engagement.context}
+                    </p>
+                    {engagement.active && (
+                      <span className="work-status-badge" aria-label="Active engagement">
+                        <span className="work-status-dot" aria-hidden="true" />
+                        Active
+                      </span>
+                    )}
+                  </div>
                   <h3>{engagement.title}</h3>
                   <p>{engagement.body}</p>
                   <div className="work-tags" aria-label="Engagement tags">
@@ -156,8 +181,11 @@ export default function WorkPage() {
 
       <section className="cta-section work-cta-section">
         <div className="container">
-          <h2>Need relevant experience under pressure?</h2>
-          <p className="subhead">
+          <div className="section-intro">
+            <span className="work-eyebrow">Next Step</span>
+            <h2>Need relevant experience under pressure?</h2>
+          </div>
+          <p className="page-lead">
             Start with a direct conversation about your environment, the stakes,
             and what has to hold.
           </p>
@@ -169,6 +197,20 @@ export default function WorkPage() {
               What We Do →
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="cta-band">
+        <div className="cta-band-inner">
+          <h2>&ldquo;Complexity is the hiding place of failure.&rdquo;</h2>
+          <p>
+            Fewer tools. Less noise. Total confidence. YUZANA exists to restore
+            clarity to leaders responsible for complex, high-stakes
+            environments.
+          </p>
+          <Link href="/engage" className="btn btn-white">
+            Start a Conversation
+          </Link>
         </div>
       </section>
     </main>

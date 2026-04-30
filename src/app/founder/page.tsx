@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -8,25 +9,56 @@ export const metadata: Metadata = {
 };
 
 export default function Founder() {
+  const credentials = [
+    "Former CISO, City of Los Angeles",
+    "Founded the nation’s first maritime Cyber Security Operations Center",
+    "Founded LA Cyber Lab, the first city-led public-private threat intelligence partnership",
+    "Cybersecurity Leader of the Year and Statescoop 50 award recipient",
+  ];
+
   return (
     <main>
-      <section className="founder-hero">
+      <section className="founder-intro">
         <div className="container">
-          <h1>Timothy Lee</h1>
-          <p className="title" style={{ textAlign: "center", marginLeft: "auto", marginRight: "auto" }}>
-            Founder & Principal
-          </p>
-          <blockquote>
-            &ldquo;Security is not about the absence of threats. It is the
-            presence of resilience.&rdquo;
-          </blockquote>
+          <div className="founder-grid">
+            <div>
+              <span className="eyebrow">Founder</span>
+              <h1 className="founder-title">Timothy Lee</h1>
+              <p className="founder-role">Founder &amp; Principal</p>
+              <div className="hero-quote-block">
+                <p className="hero-quote">
+                  &ldquo;Security is not about the absence of threats. It is
+                  the presence of resilience.&rdquo;
+                </p>
+                <p className="hero-quote-attr">
+                  Operator. Architect. Advisor.
+                </p>
+              </div>
+              <p className="page-lead">
+                Timothy Lee is a veteran security executive who has spent his
+                career protecting some of the most complex public environments
+                in the United States.
+              </p>
+            </div>
+
+            <div className="founder-headshot-frame">
+              <Image
+                src="/tl_headshot.jpeg"
+                alt="Timothy Lee - Founder & Principal, YUZANA.AI"
+                width={900}
+                height={1200}
+                className="founder-headshot"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="founder-narrative">
-        <div className="container-wide">
-          <div className="bio-grid">
-            <div className="bio-content">
+      <section className="founder-bio">
+        <div className="container">
+          <div className="founder-bio-grid">
+            <div className="founder-bio-copy">
               <h2>Operator. Architect. Advisor.</h2>
 
               <p>
@@ -70,35 +102,26 @@ export default function Founder() {
               </p>
             </div>
 
-            <div className="bio-photo">
-              <img
-                src="/tl_headshot.jpeg"
-                alt="Timothy Lee - Founder & Principal, YUZANA.AI"
-                className="founder-headshot"
-              />
-            </div>
+            <aside className="side-note">
+              <h4>Selected Credentials</h4>
+              <ul>
+                {credentials.map((credential) => (
+                  <li key={credential}>{credential}</li>
+                ))}
+              </ul>
+            </aside>
           </div>
         </div>
       </section>
 
-      <section
-        style={{
-          padding: "6rem 0",
-          backgroundColor: "#1A1A1D",
-          color: "#F5F5F0",
-          textAlign: "center",
-        }}
-      >
-        <div className="container">
-          <h2 style={{ color: "#F5F5F0" }}>Work with Timothy</h2>
-          <p
-            className="subhead"
-            style={{ color: "#D0D0CC", margin: "2rem auto 3rem" }}
-          >
+      <section className="cta-band">
+        <div className="cta-band-inner">
+          <h2>Work with Timothy</h2>
+          <p>
             YUZANA engages with a limited number of organizations to ensure
             principal-led focus.
           </p>
-          <Link href="/engage" className="btn btn-primary">
+          <Link href="/engage" className="btn btn-white">
             Request a Conversation
           </Link>
         </div>

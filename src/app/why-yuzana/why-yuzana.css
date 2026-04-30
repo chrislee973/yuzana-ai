@@ -1,78 +1,53 @@
-/* --- PHILOSOPHY PAGE SPECIFIC STYLES --- */
-
-/* Override section padding for tighter control */
 main .philosophy-section {
-    padding: 6rem 0;
+    padding: 0;
 }
 
-/* Eyebrow labels */
-.eyebrow {
-    font-family: var(--font-jetbrains), monospace;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #C8553D;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-/* Hero header */
 .philosophy-header {
-    padding-top: 8rem;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid rgba(26, 26, 29, 0.1);
+    border-bottom: 1px solid var(--rule);
 }
 
-.philosophy-header h1 {
-    font-size: clamp(3rem, 6vw, 4.5rem);
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    font-weight: 400;
+.philosophy-lead {
+    max-width: 42rem;
 }
 
-.philosophy-header .hero-sub {
-    font-family: var(--font-playfair), serif;
-    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-    line-height: 1.4;
-    max-width: 800px;
-    color: #1A1A1D;
-    font-weight: 400;
-}
-
-/* Two-column belief blocks */
 .belief-block {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-    margin-bottom: 6rem;
+    grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
+    gap: 3rem;
+    margin-bottom: 0;
+    padding: 2.9rem 0;
     align-items: start;
+    border-top: 1px solid var(--rule);
 }
 
-.belief-title-wrapper {
-    position: sticky;
-    top: 100px; /* Account for fixed nav */
+.philosophy-section:last-child .belief-block {
+    border-bottom: 1px solid var(--rule);
 }
 
 .belief-title {
-    font-size: clamp(2rem, 3.5vw, 2.5rem);
-    font-weight: 400;
     margin-bottom: 0;
+    font-size: clamp(2.6rem, 4.3vw, 4rem);
+    line-height: 1.03;
+    max-width: 8ch;
+}
+
+.belief-title-wrapper .eyebrow {
+    margin-bottom: 0.9rem;
+}
+
+.belief-content {
+    max-width: 52rem;
 }
 
 .belief-content p {
-    font-size: 1.125rem;
-    color: rgba(26, 26, 29, 0.85);
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
+    margin-bottom: 1rem;
 }
 
-/* Highlight box for Triple Threat Zone */
 .highlight-box {
-    border-left: 3px solid #C8553D;
-    padding-left: 2rem;
-    margin: 2rem 0;
-    background-color: rgba(200, 85, 61, 0.03);
-    padding: 1.5rem 0 1.5rem 2rem;
+    border-left: 3px solid var(--accent);
+    padding: 1.2rem 0 1.2rem 1.4rem;
+    margin: 1.5rem 0;
+    background-color: var(--off-white);
 }
 
 .highlight-box p {
@@ -80,91 +55,91 @@ main .philosophy-section {
 }
 
 .highlight-box strong {
-    color: #C8553D;
-    font-weight: 600;
+    color: var(--accent-dark);
 }
 
 .highlight-box .meta {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-top: 0.5rem;
-    font-family: var(--font-jetbrains), monospace;
-    color: rgba(26, 26, 29, 0.6);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
 }
 
-/* Dark inverted section for Dark SOC */
 .dark-mode-section {
-    background-color: #1A1A1D;
-    color: #F5F5F0;
-    padding: 8rem 0;
-    margin-top: 4rem;
+    background-color: var(--ink);
+    color: var(--warm-white);
+    padding: 4.5rem 0;
+    margin-top: 3rem;
 }
 
 .dark-mode-section .eyebrow {
-    color: #F5F5F0;
-    opacity: 0.6;
+    color: rgba(250, 249, 246, 0.58);
 }
 
 .dark-mode-section .belief-title {
-    color: #F5F5F0;
+    color: var(--warm-white);
 }
 
 .dark-mode-section .belief-content p {
-    color: rgba(245, 245, 240, 0.8);
+    color: rgba(250, 249, 246, 0.78);
 }
 
-/* Closing manifesto section */
 .manifesto-close {
     text-align: center;
-    padding: 8rem 0 6rem;
+    padding: 4.5rem 0 3rem;
 }
 
 .manifesto-close h3 {
-    font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 1.5rem;
-    font-weight: 400;
+    font-size: clamp(2.2rem, 4vw, 3.35rem);
 }
 
 .manifesto-close p {
     margin: 0 auto;
-    font-size: 1.25rem;
-    color: rgba(26, 26, 29, 0.85);
+    max-width: 34rem;
 }
 
-/* Call to action section */
 .cta-section {
-    padding: 6rem 0;
-    background-color: #fff;
+    padding-top: 4rem;
+    border-top: 1px solid var(--rule);
     text-align: center;
-    border-top: 1px solid rgba(26, 26, 29, 0.1);
 }
 
-.cta-section h2 {
-    font-weight: 400;
-    margin-bottom: 2rem;
+.philosophy-cta-stack {
+    max-width: 42rem;
+    margin: 0 auto;
 }
 
-.cta-section .subhead {
-    margin: 2rem auto 3rem;
-    max-width: 600px;
+.philosophy-cta-stack .eyebrow {
+    margin-bottom: 0.9rem;
 }
 
-/* Mobile responsive */
+.philosophy-cta-stack h2 {
+    max-width: 12ch;
+    margin: 0 auto 1.15rem;
+    font-size: clamp(2.8rem, 4.4vw, 4.4rem);
+    line-height: 1.06;
+    text-wrap: balance;
+}
+
+.philosophy-cta-stack .page-lead {
+    max-width: 40rem;
+    margin: 0 auto 1.6rem;
+}
+
 @media (max-width: 768px) {
-    .philosophy-header {
-        padding-top: 6rem;
-    }
-    
     .belief-block {
         grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-bottom: 4rem;
+        gap: 1.1rem;
+        padding: 2rem 0;
     }
-    
-    .belief-title-wrapper {
-        position: static;
-        margin-bottom: 1.5rem;
+
+    .belief-title {
+        max-width: none;
+        font-size: clamp(2.15rem, 9vw, 3.2rem);
     }
-    
+
     .highlight-box {
         padding-left: 1.5rem;
         padding-right: 1rem;
@@ -176,5 +151,14 @@ main .philosophy-section {
     
     .manifesto-close {
         padding: 4rem 0;
+    }
+
+    .philosophy-cta-stack h2 {
+        max-width: 11ch;
+        font-size: clamp(2.45rem, 10vw, 3.5rem);
+    }
+
+    .philosophy-cta-stack .page-lead {
+        margin-bottom: 1.4rem;
     }
 }
