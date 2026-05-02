@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface FormState {
   name: string;
@@ -10,7 +10,27 @@ interface FormState {
   ambiguity: string;
 }
 
+type FormErrors = Partial<Record<keyof FormState, string>>;
+
 type FormVisibility = "visible" | "hiding" | "hidden";
+
+const FIELD_ORDER: (keyof FormState)[] = [
+  "name",
+  "email",
+  "organization",
+  "role",
+  "ambiguity",
+];
+
+const FIELD_LABELS: Record<keyof FormState, string> = {
+  name: "your name",
+  email: "your email",
+  organization: "your organization",
+  role: "your role",
+  ambiguity: "the ambiguity you're trying to resolve",
+};
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function EngageForm() {
   const [formState, setFormState] = useState<FormState>({
@@ -20,6 +40,8 @@ export default function EngageForm() {
     role: "",
     ambiguity: "",
   });
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formVisibility, setFormVisibility] = useState<FormVisibility>(
     "visible"
@@ -27,6 +49,15 @@ export default function EngageForm() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [successVisible, setSuccessVisible] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
+  const fieldRefs = useRef<
+    Record<keyof FormState, HTMLInputElement | HTMLTextAreaElement | null>
+  >({
+    name: null,
+    email: null,
+    organization: null,
+    role: null,
+    ambiguity: null,
+  });
 
   useEffect(() => {
     try {
@@ -63,21 +94,30 @@ export default function EngageForm() {
   ) => {
     const { name, value } = e.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleInvalid = (
-    e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    e.preventDefault();
-    e.currentTarget.classList.add("error");
-  };
-
-  const handleInput = (
-    e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    if (e.currentTarget.classList.contains("error")) {
-      e.currentTarget.classList.remove("error");
+    if (errors[name as keyof FormState]) {
+      setErrors((prev) => {
+        const next = { ...prev };
+        delete next[name as keyof FormState];
+        return next;
+      });
     }
+  };
+
+  const validate = (state: FormState): FormErrors => {
+    const next: FormErrors = {};
+    if (!state.name.trim()) next.name = "Please enter your name.";
+    if (!state.email.trim()) {
+      next.email = "Please enter your email.";
+    } else if (!EMAIL_RE.test(state.email.trim())) {
+      next.email = "Please enter a valid email address.";
+    }
+    if (!state.organization.trim())
+      next.organization = "Please enter your organization.";
+    if (!state.role.trim()) next.role = "Please enter your role.";
+    if (!state.ambiguity.trim())
+      next.ambiguity =
+        "Please describe the ambiguity you're trying to resolve.";
+    return next;
   };
 
   const handleTextareaInput = (
@@ -108,6 +148,23 @@ export default function EngageForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (isSubmitting) return;
+
+    setSubmitError(null);
+
+    const validationErrors = validate(formState);
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+
+      const firstInvalid = FIELD_ORDER.find((field) => validationErrors[field]);
+      if (firstInvalid) {
+        const el = fieldRefs.current[firstInvalid];
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "center" });
+          el.focus({ preventScroll: true });
+        }
+      }
+      return;
+    }
 
     setIsSubmitting(true);
 
@@ -148,6 +205,11 @@ export default function EngageForm() {
       }, 500);
     } catch (error) {
       console.error("Submission error:", error);
+      setSubmitError(
+        error instanceof Error
+          ? `Couldn't send your request: ${error.message}. Please try again or email us directly.`
+          : "Couldn't send your request. Please try again or email us directly."
+      );
       setIsSubmitting(false);
     }
   };
@@ -196,82 +258,157 @@ export default function EngageForm() {
         className="contact-form"
         id="contactForm"
         onSubmit={handleSubmit}
+        noValidate
         style={formStyle}
       >
+        <p className="form-required-legend">
+          <span className="required-mark" aria-hidden="true">*</span>
+          Required
+        </p>
+
         <div className="form-group">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">
+            Name
+            <span className="required-mark" aria-hidden="true">*</span>
+          </label>
           <input
             type="text"
             id="name"
             name="name"
-            required
+            ref={(el) => {
+              fieldRefs.current.name = el;
+            }}
+            aria-required="true"
+            aria-invalid={errors.name ? true : undefined}
+            aria-describedby={errors.name ? "name-error" : undefined}
+            className={errors.name ? "error" : undefined}
             value={formState.name}
             onChange={handleChange}
-            onInvalid={handleInvalid}
-            onInput={handleInput}
           />
+          {errors.name && (
+            <span className="field-error" id="name-error" role="alert">
+              {errors.name}
+            </span>
+          )}
         </div>
 
         <div className="form-group">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">
+            Email
+            <span className="required-mark" aria-hidden="true">*</span>
+          </label>
           <input
             type="email"
             id="email"
             name="email"
-            required
+            ref={(el) => {
+              fieldRefs.current.email = el;
+            }}
+            aria-required="true"
+            aria-invalid={errors.email ? true : undefined}
+            aria-describedby={errors.email ? "email-error" : undefined}
+            className={errors.email ? "error" : undefined}
             value={formState.email}
             onChange={handleChange}
-            onInvalid={handleInvalid}
-            onInput={handleInput}
           />
+          {errors.email && (
+            <span className="field-error" id="email-error" role="alert">
+              {errors.email}
+            </span>
+          )}
         </div>
 
         <div className="form-group">
-          <label htmlFor="organization">Organization</label>
+          <label htmlFor="organization">
+            Organization
+            <span className="required-mark" aria-hidden="true">*</span>
+          </label>
           <input
             type="text"
             id="organization"
             name="organization"
-            required
+            ref={(el) => {
+              fieldRefs.current.organization = el;
+            }}
+            aria-required="true"
+            aria-invalid={errors.organization ? true : undefined}
+            aria-describedby={
+              errors.organization ? "organization-error" : undefined
+            }
+            className={errors.organization ? "error" : undefined}
             value={formState.organization}
             onChange={handleChange}
-            onInvalid={handleInvalid}
-            onInput={handleInput}
           />
+          {errors.organization && (
+            <span className="field-error" id="organization-error" role="alert">
+              {errors.organization}
+            </span>
+          )}
         </div>
 
         <div className="form-group">
-          <label htmlFor="role">Role</label>
+          <label htmlFor="role">
+            Role
+            <span className="required-mark" aria-hidden="true">*</span>
+          </label>
           <input
             type="text"
             id="role"
             name="role"
-            required
+            ref={(el) => {
+              fieldRefs.current.role = el;
+            }}
+            aria-required="true"
+            aria-invalid={errors.role ? true : undefined}
+            aria-describedby={errors.role ? "role-error" : undefined}
+            className={errors.role ? "error" : undefined}
             value={formState.role}
             onChange={handleChange}
-            onInvalid={handleInvalid}
-            onInput={handleInput}
           />
+          {errors.role && (
+            <span className="field-error" id="role-error" role="alert">
+              {errors.role}
+            </span>
+          )}
         </div>
 
         <div className="form-group">
           <label htmlFor="ambiguity">
             What ambiguity are you trying to resolve?
+            <span className="required-mark" aria-hidden="true">*</span>
           </label>
           <textarea
             id="ambiguity"
             name="ambiguity"
-            required
+            ref={(el) => {
+              fieldRefs.current.ambiguity = el;
+            }}
+            aria-required="true"
+            aria-invalid={errors.ambiguity ? true : undefined}
+            aria-describedby={errors.ambiguity ? "ambiguity-error" : undefined}
+            className={`textarea-large${errors.ambiguity ? " error" : ""}`}
             value={formState.ambiguity}
             onChange={handleTextareaInput}
             onFocus={handleTextareaFocus}
             onBlur={handleTextareaBlur}
-            onInvalid={handleInvalid}
-            onInput={handleInput}
             placeholder="Tell us about the specific challenges, uncertainties, or questions you're facing..."
-            className="textarea-large"
           />
+          {errors.ambiguity && (
+            <span className="field-error" id="ambiguity-error" role="alert">
+              {errors.ambiguity}
+            </span>
+          )}
         </div>
+
+        {submitError && (
+          <p
+            className="field-error"
+            role="alert"
+            style={{ marginBottom: "1rem" }}
+          >
+            {submitError}
+          </p>
+        )}
 
         <button type="submit" className="btn btn-submit" disabled={isSubmitting}>
           {isSubmitting ? "Sending..." : "Request a Conversation"}

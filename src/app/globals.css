@@ -102,15 +102,15 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
 }
 
 h2 {
-  font-size: clamp(2.2rem, 4.3vw, 4rem);
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
 }
 
 h3 {
-  font-size: clamp(1.55rem, 2.5vw, 2.4rem);
+  font-size: clamp(1.45rem, 2.2vw, 2.05rem);
 }
 
 p,
@@ -135,9 +135,9 @@ p {
 .wwd-eyebrow {
   display: block;
   margin-bottom: 1.1rem;
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   font-weight: 400;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent-dark);
 }
@@ -167,9 +167,9 @@ p {
 }
 
 .section-label {
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   font-weight: 400;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent-dark);
   margin-bottom: 1rem;
@@ -393,10 +393,13 @@ nav.scrolled {
 .hero-stat-value {
   display: block;
   margin-bottom: 0.4rem;
-  font-family: var(--font-cormorant), Georgia, serif;
+  font-family: var(--font-jost), system-ui, sans-serif;
   font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
   line-height: 1;
   color: var(--ink);
+  font-variant-numeric: lining-nums tabular-nums;
 }
 
 .hero-stat-label {
@@ -543,10 +546,10 @@ nav.scrolled {
 .work-tag {
   display: inline-flex;
   align-items: center;
-  padding: 0.32rem 0.65rem;
+  padding: 0.38rem 0.7rem;
   border: 1px solid var(--rule);
-  font-size: 0.64rem;
-  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-muted);
   transition: border-color 0.2s ease, color 0.2s ease;
@@ -740,6 +743,31 @@ nav.scrolled {
   color: var(--text-muted);
 }
 
+.form-group label .required-mark {
+  color: #c0392b;
+  margin-left: 0.25rem;
+}
+
+.form-required-legend {
+  margin: 0 0 1.4rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.form-required-legend .required-mark {
+  color: #c0392b;
+  margin-right: 0.25rem;
+}
+
+.field-error {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: #c0392b;
+}
+
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -771,17 +799,31 @@ nav.scrolled {
 
 .btn-submit {
   width: 100%;
+  background: var(--ink);
+  color: var(--warm-white);
+  border: 1px solid var(--ink);
+  cursor: pointer;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 input.error,
 textarea.error {
-  border-color: var(--accent-dark) !important;
-  background-color: rgba(184, 151, 106, 0.06) !important;
+  border-color: #c0392b !important;
+  background-color: rgba(192, 57, 43, 0.04) !important;
 }
 
 input.error:focus,
 textarea.error:focus {
-  box-shadow: 0 0 0 3px rgba(140, 110, 73, 0.14) !important;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.18) !important;
 }
 
 :focus-visible {
