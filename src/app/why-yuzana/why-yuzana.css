@@ -6,8 +6,22 @@ main .philosophy-section {
     border-bottom: 1px solid var(--rule);
 }
 
+.philosophy-header h1 {
+    max-width: 18ch;
+}
+
 .philosophy-lead {
     max-width: 42rem;
+    color: #4d4a45;
+}
+
+.philosophy-header .eyebrow,
+.belief-title-wrapper .eyebrow,
+.manifesto-close .eyebrow {
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: #7a5d3c;
 }
 
 .belief-block {
@@ -41,6 +55,7 @@ main .philosophy-section {
 
 .belief-content p {
     margin-bottom: 1rem;
+    color: #4d4a45;
 }
 
 .highlight-box {
@@ -59,11 +74,12 @@ main .philosophy-section {
 }
 
 .highlight-box .meta {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
+    font-weight: 500;
     margin-top: 0.5rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.09em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: #746f68;
 }
 
 .dark-mode-section {
@@ -74,7 +90,7 @@ main .philosophy-section {
 }
 
 .dark-mode-section .eyebrow {
-    color: rgba(250, 249, 246, 0.58);
+    color: rgba(250, 249, 246, 0.72);
 }
 
 .dark-mode-section .belief-title {
@@ -82,7 +98,7 @@ main .philosophy-section {
 }
 
 .dark-mode-section .belief-content p {
-    color: rgba(250, 249, 246, 0.78);
+    color: rgba(250, 249, 246, 0.86);
 }
 
 .manifesto-close {

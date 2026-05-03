@@ -14,7 +14,7 @@ export default function WhyYuzana() {
       <section className="page-header philosophy-header">
         <div className="container">
           <span className="eyebrow">The Philosophy</span>
-          <h1>Noise Is the Enemy.</h1>
+          <h1>Noise is the Enemy.</h1>
           <p className="page-lead philosophy-lead">
             The industry is obsessed with volume—more tools, more alerts, more
             compliance checklists. YUZANA exists to filter the signal from the

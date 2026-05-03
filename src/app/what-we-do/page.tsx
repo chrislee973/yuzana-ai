@@ -28,7 +28,7 @@ export default function WhatWeDo() {
         </div>
       </section>
 
-      <section className="wwd-section">
+      <section className="wwd-section wwd-core-section">
         <div className="container">
           <div className="section-intro">
             <span className="wwd-eyebrow">Core Position</span>

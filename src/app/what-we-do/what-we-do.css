@@ -5,18 +5,42 @@
 
 .wwd-header .page-lead {
     max-width: 58rem;
+    color: #4d4a45;
+}
+
+.wwd-eyebrow {
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: #7a5d3c;
 }
 
 .wwd-section {
     padding-top: 3.5rem;
 }
 
+.wwd-core-section {
+    padding-bottom: clamp(2.75rem, 4vw, 3.5rem);
+}
+
+.wwd-core-section + .wwd-section {
+    padding-top: clamp(2.5rem, 4vw, 3.25rem);
+}
+
 .wwd-core-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
     border-top: 1px solid var(--rule);
     padding-top: 2rem;
+    max-width: 52rem;
+}
+
+.wwd-core-grid p {
+    max-width: 46rem;
+    margin-bottom: 1.05rem;
+    color: #4d4a45;
+}
+
+.wwd-core-grid p:last-child {
+    margin-bottom: 0;
 }
 
 .capability-block {
@@ -45,20 +69,21 @@
     font-family: var(--font-cormorant), Georgia, serif;
     font-size: 1.15rem;
     font-style: italic;
-    color: var(--text-muted);
+    color: #746f68;
     margin-bottom: 0;
 }
 
 .capability-content p {
     margin-bottom: 1rem;
+    color: #4d4a45;
 }
 
 .capability-label {
-    font-size: 0.62rem;
-    font-weight: 400;
+    font-size: 0.68rem;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--text-muted);
+    letter-spacing: 0.14em;
+    color: #746f68;
     margin-bottom: 0.55rem;
     margin-top: 1.75rem;
     display: block;
@@ -75,17 +100,22 @@
 }
 
 .focus-list li {
-    padding: 0.4rem 0 0.4rem 1rem;
-    font-size: 0.95rem;
+    padding: 0.46rem 0 0.46rem 1.3rem;
+    font-size: 0.97rem;
     line-height: 1.6;
     position: relative;
+    color: #22211f;
 }
 
 .focus-list li::before {
     content: '•';
     position: absolute;
     left: 0;
-    color: var(--accent);
+    top: 0.58rem;
+    color: #c8553d;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1;
 }
 
 .wwd-section-framed {
@@ -97,6 +127,7 @@
 .engage-intro {
     margin-bottom: 1.25rem;
     max-width: 38rem;
+    color: #4d4a45;
 }
 
 .engage-models {
@@ -113,10 +144,11 @@
 }
 
 .engage-model-number {
-    font-size: 0.62rem;
+    font-size: 0.68rem;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--text-muted);
+    letter-spacing: 0.14em;
+    font-weight: 500;
+    color: #746f68;
     margin-bottom: 1rem;
     display: block;
 }
@@ -131,8 +163,12 @@
     font-family: var(--font-cormorant), Georgia, serif;
     font-style: italic;
     font-size: 1.05rem;
-    color: var(--text-muted);
+    color: #746f68;
     margin-bottom: 1.5rem;
+}
+
+.engage-model p {
+    color: #4d4a45;
 }
 
 .engage-model p:last-child {
@@ -151,7 +187,7 @@
     border-bottom: 1px solid rgba(250, 249, 246, 0.16);
     font-size: 0.98rem;
     line-height: 1.75;
-    color: rgba(250, 249, 246, 0.78);
+    color: rgba(250, 249, 246, 0.86);
 }
 
 .principles-list li:first-child {
@@ -178,12 +214,24 @@
 }
 
 .wwd-eyebrow-inverse {
-    color: rgba(250, 249, 246, 0.58);
+    color: rgba(250, 249, 246, 0.72);
+}
+
+.wwd-dark-section + .cta-band p {
+    color: rgba(250, 249, 246, 0.74);
 }
 
 @media (max-width: 768px) {
+    .wwd-core-section {
+        padding-bottom: 2.4rem;
+    }
+
+    .wwd-core-section + .wwd-section {
+        padding-top: 2.35rem;
+    }
+
     .wwd-core-grid {
-        grid-template-columns: 1fr;
+        padding-top: 1.65rem;
     }
 
     .capability-block {

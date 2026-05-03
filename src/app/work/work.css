@@ -2,8 +2,19 @@
     padding-top: 3.5rem;
 }
 
+.work-eyebrow {
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: #7a5d3c;
+}
+
 .work-hero h1 {
     max-width: 14ch;
+}
+
+.work-hero .page-lead {
+    color: #4d4a45;
 }
 
 .work-section-muted {
@@ -13,6 +24,7 @@
 .work-section-intro {
     margin-top: 0;
     max-width: 38rem;
+    color: #4d4a45;
 }
 
 .work-section-heading h2 {
@@ -47,7 +59,7 @@
     height: 36px;
     margin-bottom: 1rem;
     border: 1px solid var(--rule);
-    color: var(--mid-gray);
+    color: #746f68;
     background: var(--warm-white);
     transition: border-color 0.2s ease, color 0.2s ease;
 }
@@ -61,14 +73,15 @@
     margin-bottom: 0.45rem;
     font-size: 1rem;
     font-family: var(--font-jost), system-ui, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.01em;
 }
 
 .work-card p {
     margin-bottom: 0;
-    font-size: 0.88rem;
+    font-size: 0.92rem;
     line-height: 1.65;
+    color: #4d4a45;
 }
 
 .work-engagements {
@@ -107,11 +120,11 @@
 
 .work-engagement-context {
     margin-bottom: 0;
-    font-size: 0.72rem;
+    font-size: 0.74rem;
     line-height: 1.7;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: #746f68;
 }
 
 .work-status-badge {
@@ -145,6 +158,13 @@
 
 .work-engagement-body p {
     max-width: 52rem;
+    color: #4d4a45;
+}
+
+.work-tag {
+    border-color: #d7d0c6;
+    color: #6f6a63;
+    font-weight: 500;
 }
 
 .work-confidentiality-note {
@@ -158,6 +178,7 @@
     max-width: none;
     margin-bottom: 0;
     font-size: 0.9rem;
+    color: #4d4a45;
 }
 
 .work-cta-section {
@@ -166,6 +187,11 @@
 
 .work-cta-section .page-lead {
     margin-bottom: 1.75rem;
+    color: #4d4a45;
+}
+
+.work-cta-section + .cta-band p {
+    color: rgba(250, 249, 246, 0.74);
 }
 
 @media (max-width: 900px) {
@@ -237,8 +263,8 @@
 @media (max-width: 480px) {
     .work-engagement-context {
         margin-bottom: 0.4rem;
-        font-size: 0.6rem;
-        letter-spacing: 0.16em;
+        font-size: 0.68rem;
+        letter-spacing: 0.11em;
     }
 
     .work-card h3 {
@@ -246,11 +272,11 @@
     }
 
     .work-card p {
-        font-size: 0.84rem;
+        font-size: 0.9rem;
     }
 
     .work-tag {
         padding: 0.28rem 0.55rem;
-        font-size: 0.6rem;
+        font-size: 0.66rem;
     }
 }

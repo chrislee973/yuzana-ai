@@ -22,14 +22,6 @@ const FIELD_ORDER: (keyof FormState)[] = [
   "ambiguity",
 ];
 
-const FIELD_LABELS: Record<keyof FormState, string> = {
-  name: "your name",
-  email: "your email",
-  organization: "your organization",
-  role: "your role",
-  ambiguity: "the ambiguity you're trying to resolve",
-};
-
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function EngageForm() {
